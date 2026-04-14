@@ -360,7 +360,10 @@ img { max-width: 100%; display: block; }
 }
 .model-card-img {
   aspect-ratio: 3/4;
-  background: var(--dark-gray);
+  background-color: var(--dark-gray);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -414,12 +417,12 @@ img { max-width: 100%; display: block; }
 }
 
 /* Vary card bg tones */
-.model-card:nth-child(6n+1) .model-card-img { background: var(--surface-1); }
-.model-card:nth-child(6n+2) .model-card-img { background: var(--surface-2); }
-.model-card:nth-child(6n+3) .model-card-img { background: var(--surface-3); }
-.model-card:nth-child(6n+4) .model-card-img { background: var(--surface-4); }
-.model-card:nth-child(6n+5) .model-card-img { background: var(--surface-5); }
-.model-card:nth-child(6n+6) .model-card-img { background: var(--surface-6); }
+.model-card:nth-child(6n+1) .model-card-img { background-color: var(--surface-1); }
+.model-card:nth-child(6n+2) .model-card-img { background-color: var(--surface-2); }
+.model-card:nth-child(6n+3) .model-card-img { background-color: var(--surface-3); }
+.model-card:nth-child(6n+4) .model-card-img { background-color: var(--surface-4); }
+.model-card:nth-child(6n+5) .model-card-img { background-color: var(--surface-5); }
+.model-card:nth-child(6n+6) .model-card-img { background-color: var(--surface-6); }
 
 /* ── CONTENT SECTIONS ── */
 .content-section {
@@ -586,9 +589,9 @@ img { max-width: 100%; display: block; }
 }
 
 /* Vary news card bg */
-.news-card:nth-child(3n+1) .news-card-img { background: var(--surface-1); }
-.news-card:nth-child(3n+2) .news-card-img { background: var(--surface-2); }
-.news-card:nth-child(3n+3) .news-card-img { background: var(--surface-3); }
+.news-card:nth-child(3n+1) .news-card-img { background-color: var(--surface-1); }
+.news-card:nth-child(3n+2) .news-card-img { background-color: var(--surface-2); }
+.news-card:nth-child(3n+3) .news-card-img { background-color: var(--surface-3); }
 
 /* ── CONTACT / FORM ── */
 .contact-grid {

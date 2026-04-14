@@ -237,10 +237,10 @@
     color: var(--mid-gray);
     opacity: var(--ph-opacity);
   }
-  .gallery-item:nth-child(odd) { background: var(--surface-1); }
-  .gallery-item:nth-child(even) { background: var(--surface-2); }
-  .gallery-item:nth-child(3n) { background: var(--surface-3); }
-  .gallery-item:nth-child(4n+1) { background: var(--surface-4); }
+  .gallery-item:nth-child(odd) { background-color: var(--surface-1); }
+  .gallery-item:nth-child(even) { background-color: var(--surface-2); }
+  .gallery-item:nth-child(3n) { background-color: var(--surface-3); }
+  .gallery-item:nth-child(4n+1) { background-color: var(--surface-4); }
   .gallery-item.span-2 { grid-column: span 2; grid-row: span 2; }
   .discover-section {
     padding: 100px 72px;
@@ -314,11 +314,11 @@
     color: var(--mid-gray);
     opacity: var(--ph-opacity);
   }
-  .discover-card:nth-child(1) .discover-card-img { background: var(--surface-1); }
-  .discover-card:nth-child(2) .discover-card-img { background: var(--surface-2); }
-  .discover-card:nth-child(3) .discover-card-img { background: var(--surface-3); }
-  .discover-card:nth-child(4) .discover-card-img { background: var(--surface-4); }
-  .discover-card:nth-child(5) .discover-card-img { background: var(--surface-5); }
+  .discover-card:nth-child(1) .discover-card-img { background-color: var(--surface-1); }
+  .discover-card:nth-child(2) .discover-card-img { background-color: var(--surface-2); }
+  .discover-card:nth-child(3) .discover-card-img { background-color: var(--surface-3); }
+  .discover-card:nth-child(4) .discover-card-img { background-color: var(--surface-4); }
+  .discover-card:nth-child(5) .discover-card-img { background-color: var(--surface-5); }
   @media (max-width: 1024px) {
     .model-hero { grid-template-columns: 1fr; }
     .model-hero-right { height: 70vh; }
@@ -408,7 +408,7 @@
   var discoverCards = picked.map(function(slug) {
     var d = PROFILES[slug];
     var imgInner = d.cover
-      ? '<div class="discover-card-img" style="background:url(\'' + d.cover + '\') center/cover no-repeat;"></div>'
+      ? '<div class="discover-card-img" style="background-image:url(\'' + d.cover + '\'); background-size:cover; background-position:center;"></div>'
       : '<div class="discover-card-img"><span class="dc-text">Photo</span></div>';
     return '<a class="discover-card reveal" href="model.html?id=' + slug + '">' +
       imgInner +
@@ -427,7 +427,7 @@
     '  </div>' +
     '  <div class="model-hero-right">' +
     (p.cover
-      ? '    <div class="hero-image-placeholder" style="background:url(\'' + p.cover + '\') center/cover no-repeat;"></div>'
+      ? '    <div class="hero-image-placeholder" style="background-image:url(\'' + p.cover + '\'); background-size:cover; background-position:center;"></div>'
       : '    <div class="hero-image-placeholder"><span class="placeholder-text">Profile Image</span></div>') +
     '  </div>' +
     '</section>' +
