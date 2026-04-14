@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maren Voss | Raw Division</title>
+<title>Profile | Raw Division</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* ── MODEL HERO ── */
   .model-hero {
     min-height: 100vh;
     display: grid;
@@ -55,7 +54,6 @@
     position: relative;
     z-index: var(--z-overlay);
   }
-
   .model-tagline {
     font-family: var(--font-body);
     font-size: 16px;
@@ -91,8 +89,6 @@
     color: var(--mid-gray);
     transform: rotate(-90deg);
   }
-
-  /* ── BOOKING STRIP ── */
   .booking-strip {
     display: flex;
     align-items: center;
@@ -120,8 +116,6 @@
     transition: all 0.3s;
   }
   .booking-strip .sedcard-btn:hover { background: var(--accent); color: var(--black); }
-
-  /* ── MODEL STATS ── */
   .stats-section {
     padding: 80px 72px;
     display: grid;
@@ -177,8 +171,6 @@
     line-height: 1;
   }
   .stat-value small { font-size: 13px; color: var(--warm-gray); margin-left: 8px; font-weight: 400; }
-
-  /* ── PORTFOLIO ── */
   .portfolio-section { padding: 40px 0 100px; }
   .portfolio-header {
     padding: 0 72px 60px;
@@ -250,8 +242,6 @@
   .gallery-item:nth-child(3n) { background: var(--surface-3); }
   .gallery-item:nth-child(4n+1) { background: var(--surface-4); }
   .gallery-item.span-2 { grid-column: span 2; grid-row: span 2; }
-
-  /* ── DISCOVER ── */
   .discover-section {
     padding: 100px 72px;
     border-top: 1px solid var(--border-subtle);
@@ -289,7 +279,7 @@
   }
   .discover-header a:hover { color: var(--white); border-color: var(--white); }
   .discover-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-  .discover-card { position: relative; overflow: hidden; cursor: pointer; }
+  .discover-card { position: relative; overflow: hidden; cursor: pointer; display: block; }
   .discover-card-img {
     aspect-ratio: 3/4;
     background: var(--dark-gray);
@@ -329,7 +319,6 @@
   .discover-card:nth-child(3) .discover-card-img { background: var(--surface-3); }
   .discover-card:nth-child(4) .discover-card-img { background: var(--surface-4); }
   .discover-card:nth-child(5) .discover-card-img { background: var(--surface-5); }
-
   @media (max-width: 1024px) {
     .model-hero { grid-template-columns: 1fr; }
     .model-hero-right { height: 70vh; }
@@ -377,85 +366,111 @@
   <a href="contact.html">Contact</a><a href="apply.html">Apply</a>
 </div>
 
-<section class="model-hero">
-  <div class="model-hero-left">
-    <div class="model-name-pre anim-fade-up anim-d1">Raw Division Exclusive</div>
-    <h1 class="model-name anim-fade-up anim-d2">Maren<br>Voss</h1>
-    <p class="model-tagline anim-fade-up anim-d3">Berlin / New York / Paris</p>
-  </div>
-  <div class="model-hero-right">
-    <div class="hero-image-placeholder"><span class="placeholder-text">Model Image</span></div>
-  </div>
-</section>
-
-<div class="booking-strip">
-  <a class="sedcard-btn" href="#">Download Sedcard</a>
-  <span class="divider"></span>
-  <span>Booking</span>
-  <a href="/cdn-cgi/l/email-protection#52303d3d393b3c3512203325363b243b213b3d3c7c313d3f"><span class="__cf_email__" data-cfemail="4a2825252123242d0a382b3d2e233c233923252464292527">[email&#160;protected]</span></a>
-  <span class="divider"></span>
-  <span>Editorials</span>
-  <a href="/cdn-cgi/l/email-protection#ee8b8a879a819c878f82ae9c8f998a8798879d878180c08d8183"><span class="__cf_email__" data-cfemail="0f6a6b667b607d666e634f7d6e786b6679667c666061216c6062">[email&#160;protected]</span></a>
-</div>
-
-<section class="stats-section">
-  <div class="stats-label-col reveal"><p>Measurements</p><h3>Profile</h3></div>
-  <div class="stats-grid">
-    <div class="stat-card reveal"><div class="stat-label">Height</div><div class="stat-value">178<small>cm / 5'10"</small></div></div>
-    <div class="stat-card reveal"><div class="stat-label">Dress</div><div class="stat-value">34<small>EU / 4 US</small></div></div>
-    <div class="stat-card reveal"><div class="stat-label">Shoes</div><div class="stat-value">41<small>EU / 10 US</small></div></div>
-    <div class="stat-card reveal"><div class="stat-label">Bust</div><div class="stat-value">83<small>cm / 33"</small></div></div>
-    <div class="stat-card reveal"><div class="stat-label">Waist</div><div class="stat-value">65<small>cm / 26"</small></div></div>
-    <div class="stat-card reveal"><div class="stat-label">Hips</div><div class="stat-value">92<small>cm / 36"</small></div></div>
-  </div>
-</section>
-
-<section class="portfolio-section">
-  <div class="portfolio-header reveal"><h2>Portfolio</h2><span class="count">12 Images</span></div>
-  <div class="gallery-grid">
-    <div class="gallery-item span-2 reveal"><div class="g-placeholder"><span class="g-inner-text">Editorial</span></div><span class="g-number">01</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Studio</span></div><span class="g-number">02</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Beauty</span></div><span class="g-number">03</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Studio</span></div><span class="g-number">04</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Editorial</span></div><span class="g-number">05</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Outdoor</span></div><span class="g-number">06</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Beauty</span></div><span class="g-number">07</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Fashion</span></div><span class="g-number">08</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Studio</span></div><span class="g-number">09</span></div>
-    <div class="gallery-item span-2 reveal"><div class="g-placeholder"><span class="g-inner-text">Campaign</span></div><span class="g-number">10</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Portrait</span></div><span class="g-number">11</span></div>
-    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Outdoor</span></div><span class="g-number">12</span></div>
-  </div>
-</section>
-
-<section class="discover-section">
-  <div class="discover-header reveal"><h2>Discover</h2><a href="women.html">View All Models</a></div>
-  <div class="discover-grid">
-    <a class="discover-card reveal" href="model.html">
-      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
-      <div class="discover-card-info"><div class="discover-card-name">Elias Roth</div><div class="discover-card-stats">192cm / 6'4"</div></div>
-    </a>
-    <a class="discover-card reveal" href="model.html">
-      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
-      <div class="discover-card-info"><div class="discover-card-name">Lina Berger</div><div class="discover-card-stats">180cm / 5'11"</div></div>
-    </a>
-    <a class="discover-card reveal" href="model.html">
-      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
-      <div class="discover-card-info"><div class="discover-card-name">Viktor &amp; Andrei</div><div class="discover-card-stats">Twins</div></div>
-    </a>
-    <a class="discover-card reveal" href="model.html">
-      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
-      <div class="discover-card-info"><div class="discover-card-name">Sanne de Vries</div><div class="discover-card-stats">177cm / 5'9.5"</div></div>
-    </a>
-    <a class="discover-card reveal" href="model.html">
-      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
-      <div class="discover-card-info"><div class="discover-card-name">Noel Matteo</div><div class="discover-card-stats">190cm / 6'3"</div></div>
-    </a>
-  </div>
-</section>
+<div id="profile-root"></div>
 
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand"><div class="footer-logo">Raw Division</div><p>Cultural exchange and companionship. Berlin. New York. Paris. Milan.</p></div>
-    <div class="footer-col"><h4>Models</h4><ul><li><a href="women.html">Women</a></li><li><a href="men.html">Men</a></li><li><a href="curved.html">Curved</a></li><li><a href="new-faces.html">New Faces</a></li></ul></div>
-    <div class="footer-col"><h4>Agency</h4><ul><li><a href="agency.html">Abo
+    <div class="footer-col"><h4>People</h4><ul><li><a href="women.html">Women</a></li><li><a href="men.html">Men</a></li><li><a href="curved.html">Curved</a></li><li><a href="new-faces.html">New Faces</a></li></ul></div>
+    <div class="footer-col"><h4>Agency</h4><ul><li><a href="agency.html">About</a></li><li><a href="agency.html#team">Team</a></li><li><a href="contact.html">Matching</a></li><li><a href="agency.html#clients">Clients</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Inquiries</a></li><li><a href="apply.html">Apply</a></li><li><a href="news.html">News</a></li><li><a href="#">Imprint</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Raw Division. All rights reserved.</p><p>Imprint &nbsp;/&nbsp; Privacy</p></div>
+</footer>
+
+<script src="profiles.js"></script>
+<script src="main.js"></script>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+  var p = id && PROFILES[id];
+
+  if (!p) {
+    window.location.href = 'women.html';
+    return;
+  }
+
+  document.title = p.first + ' ' + p.last + ' | Raw Division';
+
+  var galleryItems = p.gallery.map(function(label, i) {
+    var num = String(i + 1).padStart(2, '0');
+    var spanClass = (i === 0 || i === 9) ? ' span-2' : '';
+    return '<div class="gallery-item' + spanClass + ' reveal"><div class="g-placeholder"><span class="g-inner-text">' + label + '</span></div><span class="g-number">' + num + '</span></div>';
+  }).join('\n    ');
+
+  var otherIds = Object.keys(PROFILES).filter(function(k) { return k !== id; });
+  for (var i = otherIds.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = otherIds[i]; otherIds[i] = otherIds[j]; otherIds[j] = tmp;
+  }
+  var picked = otherIds.slice(0, 5);
+  var discoverCards = picked.map(function(slug) {
+    var d = PROFILES[slug];
+    return '<a class="discover-card reveal" href="model.html?id=' + slug + '">' +
+      '<div class="discover-card-img"><span class="dc-text">Photo</span></div>' +
+      '<div class="discover-card-info"><div class="discover-card-name">' + d.first + ' ' + d.last + '</div>' +
+      '<div class="discover-card-stats">' + d.height + 'cm / ' + d.heightImp + '</div></div></a>';
+  }).join('\n    ');
+
+  var boardPage = (p.board === 'new-faces') ? 'new-faces.html' : p.board + '.html';
+
+  document.getElementById('profile-root').innerHTML =
+    '<section class="model-hero">' +
+    '  <div class="model-hero-left">' +
+    '    <div class="model-name-pre anim-fade-up anim-d1">Raw Division Exclusive</div>' +
+    '    <h1 class="model-name anim-fade-up anim-d2">' + p.first + '<br>' + p.last + '</h1>' +
+    '    <p class="model-tagline anim-fade-up anim-d3">' + p.cities + '</p>' +
+    '  </div>' +
+    '  <div class="model-hero-right">' +
+    '    <div class="hero-image-placeholder"><span class="placeholder-text">Profile Image</span></div>' +
+    '  </div>' +
+    '</section>' +
+
+    '<div class="booking-strip">' +
+    '  <a class="sedcard-btn" href="#">Download Profile</a>' +
+    '  <span class="divider"></span>' +
+    '  <span>Inquiries</span>' +
+    '  <a href="mailto:booking@rawdivision.com">booking@rawdivision.com</a>' +
+    '  <span class="divider"></span>' +
+    '  <span>Events</span>' +
+    '  <a href="mailto:events@rawdivision.com">events@rawdivision.com</a>' +
+    '</div>' +
+
+    '<section class="stats-section">' +
+    '  <div class="stats-label-col reveal"><p>Measurements</p><h3>Profile</h3></div>' +
+    '  <div class="stats-grid">' +
+    '    <div class="stat-card reveal"><div class="stat-label">Height</div><div class="stat-value">' + p.height + '<small>cm / ' + p.heightImp + '</small></div></div>' +
+    '    <div class="stat-card reveal"><div class="stat-label">Dress</div><div class="stat-value">' + p.dress + '<small>EU / ' + p.dressImp + '</small></div></div>' +
+    '    <div class="stat-card reveal"><div class="stat-label">Shoes</div><div class="stat-value">' + p.shoes + '<small>EU / ' + p.shoesImp + '</small></div></div>' +
+    '    <div class="stat-card reveal"><div class="stat-label">Bust</div><div class="stat-value">' + p.bust + '<small>cm / ' + p.bustImp + '</small></div></div>' +
+    '    <div class="stat-card reveal"><div class="stat-label">Waist</div><div class="stat-value">' + p.waist + '<small>cm / ' + p.waistImp + '</small></div></div>' +
+    '    <div class="stat-card reveal"><div class="stat-label">Hips</div><div class="stat-value">' + p.hips + '<small>cm / ' + p.hipsImp + '</small></div></div>' +
+    '  </div>' +
+    '</section>' +
+
+    '<section class="portfolio-section">' +
+    '  <div class="portfolio-header reveal"><h2>Portfolio</h2><span class="count">' + p.gallery.length + ' Images</span></div>' +
+    '  <div class="gallery-grid">' + galleryItems + '</div>' +
+    '</section>' +
+
+    '<section class="discover-section">' +
+    '  <div class="discover-header reveal"><h2>Discover</h2><a href="' + boardPage + '">View All</a></div>' +
+    '  <div class="discover-grid">' + discoverCards + '</div>' +
+    '</section>';
+
+  // Re-init scroll reveal for dynamic content
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, i) {
+      if (entry.isIntersecting) {
+        setTimeout(function() { entry.target.classList.add('visible'); }, i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+</body>
+</html>
