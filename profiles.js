@@ -22,6 +22,7 @@ const PROFILES = {
     waist: "65", waistImp: "26\"",
     hips: "92", hipsImp: "36\"",
     board: "women",
+    cover: "images/maren-voss-cover.png",
     gallery: ["Editorial","Studio","Beauty","Studio","Editorial","Outdoor","Beauty","Fashion","Studio","Campaign","Portrait","Outdoor"]
   },
   "lina-berger": {
@@ -34,6 +35,7 @@ const PROFILES = {
     waist: "64", waistImp: "25\"",
     hips: "91", hipsImp: "36\"",
     board: "women",
+    cover: "images/lina-berger-cover.png",
     gallery: ["Portrait","Studio","Beauty","Outdoor","Editorial","Studio","Beauty","Fashion","Campaign","Studio","Portrait","Editorial"]
   },
   "sanne-de-vries": {
@@ -46,6 +48,7 @@ const PROFILES = {
     waist: "66", waistImp: "26\"",
     hips: "93", hipsImp: "36.5\"",
     board: "women",
+    cover: "images/sanne-de-vries-cover.png",
     gallery: ["Studio","Editorial","Outdoor","Beauty","Studio","Portrait","Fashion","Editorial","Beauty","Campaign","Studio","Outdoor"]
   },
   "isla-novak": {
@@ -58,6 +61,7 @@ const PROFILES = {
     waist: "62", waistImp: "24.5\"",
     hips: "90", hipsImp: "35.5\"",
     board: "women",
+    cover: "images/isla-novak-cover.png",
     gallery: ["Beauty","Studio","Editorial","Outdoor","Portrait","Studio","Fashion","Editorial","Beauty","Studio","Campaign","Outdoor"]
   },
   "aya-kimura": {
@@ -70,6 +74,7 @@ const PROFILES = {
     waist: "60", waistImp: "23.5\"",
     hips: "88", hipsImp: "34.5\"",
     board: "women",
+    cover: "images/aya-kimura-cover.png",
     gallery: ["Editorial","Beauty","Studio","Fashion","Outdoor","Portrait","Studio","Editorial","Beauty","Campaign","Studio","Outdoor"]
   },
   "clara-stein": {
@@ -82,6 +87,7 @@ const PROFILES = {
     waist: "66", waistImp: "26\"",
     hips: "93", hipsImp: "36.5\"",
     board: "women",
+    cover: "images/clara-stein-cover.png",
     gallery: ["Studio","Portrait","Editorial","Beauty","Outdoor","Fashion","Studio","Editorial","Beauty","Campaign","Portrait","Studio"]
   },
   "noor-el-amin": {
@@ -94,6 +100,7 @@ const PROFILES = {
     waist: "63", waistImp: "25\"",
     hips: "90", hipsImp: "35.5\"",
     board: "women",
+    cover: "images/noor-el-amin-cover.png",
     gallery: ["Editorial","Studio","Beauty","Fashion","Portrait","Outdoor","Studio","Editorial","Campaign","Beauty","Studio","Outdoor"]
   },
   "petra-holst": {
@@ -106,6 +113,7 @@ const PROFILES = {
     waist: "67", waistImp: "26.5\"",
     hips: "94", hipsImp: "37\"",
     board: "women",
+    cover: "images/petra-holst-cover.png",
     gallery: ["Outdoor","Studio","Editorial","Beauty","Portrait","Fashion","Studio","Campaign","Editorial","Beauty","Studio","Outdoor"]
   },
   "zola-mbeki": {
@@ -118,6 +126,7 @@ const PROFILES = {
     waist: "68", waistImp: "27\"",
     hips: "95", hipsImp: "37.5\"",
     board: "women",
+    cover: "images/zola-mbeki-cover.png",
     gallery: ["Studio","Editorial","Beauty","Portrait","Outdoor","Fashion","Campaign","Studio","Editorial","Beauty","Studio","Outdoor"]
   },
   "vera-lindgren": {
@@ -130,6 +139,7 @@ const PROFILES = {
     waist: "65", waistImp: "25.5\"",
     hips: "92", hipsImp: "36\"",
     board: "women",
+    cover: "images/vera-lindgren-cover.png",
     gallery: ["Portrait","Editorial","Studio","Beauty","Fashion","Outdoor","Campaign","Studio","Editorial","Beauty","Studio","Outdoor"]
   },
   "mila-roux": {
@@ -142,6 +152,7 @@ const PROFILES = {
     waist: "62", waistImp: "24.5\"",
     hips: "89", hipsImp: "35\"",
     board: "women",
+    cover: "images/mila-roux-cover.png",
     gallery: ["Editorial","Beauty","Studio","Outdoor","Portrait","Fashion","Studio","Campaign","Editorial","Beauty","Studio","Outdoor"]
   },
   "freya-brandt": {
@@ -154,6 +165,7 @@ const PROFILES = {
     waist: "66", waistImp: "26\"",
     hips: "93", hipsImp: "36.5\"",
     board: "women",
+    cover: "images/freya-brandt-cover.png",
     gallery: ["Studio","Editorial","Beauty","Fashion","Outdoor","Portrait","Campaign","Studio","Editorial","Beauty","Outdoor","Studio"]
   },
   "elias-roth": {
@@ -261,7 +273,7 @@ const PROFILES = {
     bust: "82", bustImp: "32.5\"",
     waist: "63", waistImp: "25\"",
     hips: "90", hipsImp: "35.5\"",
-    board: "new-faces",
+    board: "women",
     gallery: ["Editorial","Studio","Beauty","Outdoor","Portrait","Fashion","Studio","Campaign","Editorial","Beauty","Studio","Outdoor"]
   },
   "tobias-falk": {
@@ -273,7 +285,7 @@ const PROFILES = {
     bust: "97", bustImp: "38\"",
     waist: "80", waistImp: "31.5\"",
     hips: "94", hipsImp: "37\"",
-    board: "new-faces",
+    board: "women",
     gallery: ["Studio","Editorial","Portrait","Outdoor","Fashion","Campaign","Studio","Editorial","Studio","Portrait","Outdoor","Studio"]
   },
   "yara-osman": {
@@ -285,7 +297,7 @@ const PROFILES = {
     bust: "81", bustImp: "32\"",
     waist: "62", waistImp: "24.5\"",
     hips: "89", hipsImp: "35\"",
-    board: "new-faces",
+    board: "women",
     gallery: ["Beauty","Studio","Editorial","Outdoor","Portrait","Fashion","Studio","Campaign","Editorial","Beauty","Studio","Outdoor"]
   },
   "finn-larsen": {
@@ -297,7 +309,7 @@ const PROFILES = {
     bust: "95", bustImp: "37.5\"",
     waist: "78", waistImp: "30.5\"",
     hips: "93", hipsImp: "36.5\"",
-    board: "new-faces",
+    board: "women",
     gallery: ["Editorial","Studio","Outdoor","Portrait","Fashion","Campaign","Studio","Editorial","Studio","Portrait","Outdoor","Studio"]
   },
   "amara-diallo": {
@@ -309,7 +321,7 @@ const PROFILES = {
     bust: "84", bustImp: "33\"",
     waist: "65", waistImp: "25.5\"",
     hips: "92", hipsImp: "36\"",
-    board: "new-faces",
+    board: "women",
     gallery: ["Studio","Editorial","Beauty","Outdoor","Portrait","Fashion","Campaign","Studio","Editorial","Beauty","Outdoor","Studio"]
   },
   "luca-weiss": {
@@ -321,7 +333,7 @@ const PROFILES = {
     bust: "94", bustImp: "37\"",
     waist: "77", waistImp: "30\"",
     hips: "92", hipsImp: "36\"",
-    board: "new-faces",
+    board: "women",
     gallery: ["Portrait","Studio","Editorial","Outdoor","Fashion","Campaign","Studio","Editorial","Studio","Portrait","Outdoor","Studio"]
   },
   "sofie-kjaer": {
@@ -333,7 +345,7 @@ const PROFILES = {
     bust: "82", bustImp: "32.5\"",
     waist: "63", waistImp: "25\"",
     hips: "90", hipsImp: "35.5\"",
-    board: "new-faces",
+    board: "women",
     gallery: ["Editorial","Beauty","Studio","Outdoor","Portrait","Fashion","Campaign","Studio","Editorial","Beauty","Studio","Outdoor"]
   },
   "rami-haddad": {
@@ -345,7 +357,7 @@ const PROFILES = {
     bust: "96", bustImp: "38\"",
     waist: "79", waistImp: "31\"",
     hips: "94", hipsImp: "37\"",
-    board: "new-faces",
+    board: "women",
     gallery: ["Studio","Editorial","Portrait","Outdoor","Fashion","Campaign","Studio","Editorial","Portrait","Studio","Outdoor","Studio"]
   },
   "carla-voss": {

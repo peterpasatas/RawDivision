@@ -350,7 +350,6 @@
   <ul class="nav-links">
     <li><a href="women.html">Women</a></li>
     <li><a href="men.html">Men</a></li>
-    <li><a href="new-faces.html">New Faces</a></li>
     <li><a href="curved.html">Curved</a></li>
     <li><a href="agency.html">Agency</a></li>
     <li><a href="news.html">News</a></li>
@@ -361,7 +360,7 @@
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
-  <a href="women.html">Women</a><a href="men.html">Men</a><a href="new-faces.html">New Faces</a>
+  <a href="women.html">Women</a><a href="men.html">Men</a>
   <a href="curved.html">Curved</a><a href="agency.html">Agency</a><a href="news.html">News</a>
   <a href="contact.html">Contact</a><a href="apply.html">Apply</a>
 </div>
@@ -371,7 +370,7 @@
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand"><div class="footer-logo">Raw Division</div><p>Cultural exchange and companionship. Berlin. New York. Paris. Milan.</p></div>
-    <div class="footer-col"><h4>People</h4><ul><li><a href="women.html">Women</a></li><li><a href="men.html">Men</a></li><li><a href="curved.html">Curved</a></li><li><a href="new-faces.html">New Faces</a></li></ul></div>
+    <div class="footer-col"><h4>People</h4><ul><li><a href="women.html">Women</a></li><li><a href="men.html">Men</a></li><li><a href="curved.html">Curved</a></li><li></li></ul></div>
     <div class="footer-col"><h4>Agency</h4><ul><li><a href="agency.html">About</a></li><li><a href="agency.html#team">Team</a></li><li><a href="contact.html">Matching</a></li><li><a href="agency.html#clients">Clients</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Inquiries</a></li><li><a href="apply.html">Apply</a></li><li><a href="news.html">News</a></li><li><a href="#">Imprint</a></li></ul></div>
   </div>
@@ -416,7 +415,7 @@
       '<div class="discover-card-stats">' + d.height + 'cm / ' + d.heightImp + '</div></div></a>';
   }).join('\n    ');
 
-  var boardPage = (p.board === 'new-faces') ? 'new-faces.html' : p.board + '.html';
+  var boardPage = p.board + '.html';
 
   document.getElementById('profile-root').innerHTML =
     '<section class="model-hero">' +
