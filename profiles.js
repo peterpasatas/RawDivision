@@ -1,7 +1,7 @@
 const PROFILES = {
   "chloe-love": {
     first: "Chloe", last: "Love",
-    cities: "London / Berlin / Paris",
+    cities: "London / Thessaloniki / Dubai",
     height: "172", heightImp: "5'8\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "38", shoesImp: "7.5",
@@ -14,7 +14,7 @@ const PROFILES = {
   },
   "maren-voss": {
     first: "Maren", last: "Voss",
-    cities: "Berlin / New York / Paris",
+    cities: "London / Dubai",
     height: "178", heightImp: "5'10\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "41", shoesImp: "10",
@@ -27,7 +27,7 @@ const PROFILES = {
   },
   "lina-berger": {
     first: "Lina", last: "Berger",
-    cities: "Berlin / Hamburg",
+    cities: "Thessaloniki / London",
     height: "180", heightImp: "5'11\"",
     dress: "36", dressImp: "6 / S",
     shoes: "40", shoesImp: "9",
@@ -40,7 +40,7 @@ const PROFILES = {
   },
   "sanne-de-vries": {
     first: "Sanne", last: "de Vries",
-    cities: "Amsterdam / Berlin",
+    cities: "Dubai / London",
     height: "177", heightImp: "5'9.5\"",
     dress: "36", dressImp: "6 / S",
     shoes: "39", shoesImp: "8.5",
@@ -53,7 +53,7 @@ const PROFILES = {
   },
   "isla-novak": {
     first: "Isla", last: "Novak",
-    cities: "Prague / Berlin / Milan",
+    cities: "London / Athens / Dubai",
     height: "175", heightImp: "5'9\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "39", shoesImp: "8.5",
@@ -66,7 +66,7 @@ const PROFILES = {
   },
   "aya-kimura": {
     first: "Aya", last: "Kimura",
-    cities: "Tokyo / Berlin / Paris",
+    cities: "Thessaloniki / Dubai",
     height: "174", heightImp: "5'8.5\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "38", shoesImp: "7.5",
@@ -79,7 +79,7 @@ const PROFILES = {
   },
   "clara-stein": {
     first: "Clara", last: "Stein",
-    cities: "Munich / Berlin",
+    cities: "London / Mykonos",
     height: "179", heightImp: "5'10.5\"",
     dress: "36", dressImp: "6 / S",
     shoes: "40", shoesImp: "9",
@@ -92,7 +92,7 @@ const PROFILES = {
   },
   "noor-el-amin": {
     first: "Noor", last: "El-Amin",
-    cities: "Berlin / London",
+    cities: "Dubai / Thessaloniki",
     height: "176", heightImp: "5'9\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "39", shoesImp: "8.5",
@@ -105,7 +105,7 @@ const PROFILES = {
   },
   "petra-holst": {
     first: "Petra", last: "Holst",
-    cities: "Copenhagen / Berlin",
+    cities: "London / Abu Dhabi",
     height: "181", heightImp: "5'11\"",
     dress: "36", dressImp: "6 / S",
     shoes: "41", shoesImp: "10",
@@ -118,7 +118,7 @@ const PROFILES = {
   },
   "zola-mbeki": {
     first: "Zola", last: "Mbeki",
-    cities: "Johannesburg / Berlin",
+    cities: "Thessaloniki / London / Dubai",
     height: "177", heightImp: "5'9.5\"",
     dress: "36", dressImp: "6 / S",
     shoes: "40", shoesImp: "9",
@@ -131,7 +131,7 @@ const PROFILES = {
   },
   "vera-lindgren": {
     first: "Vera", last: "Lindgren",
-    cities: "Stockholm / Berlin",
+    cities: "London / Dubai / Athens",
     height: "182", heightImp: "6'0\"",
     dress: "36", dressImp: "6 / S",
     shoes: "41", shoesImp: "10",
@@ -144,7 +144,7 @@ const PROFILES = {
   },
   "mila-roux": {
     first: "Mila", last: "Roux",
-    cities: "Paris / Berlin",
+    cities: "Dubai / Mykonos",
     height: "176", heightImp: "5'9\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "39", shoesImp: "8.5",
@@ -157,7 +157,7 @@ const PROFILES = {
   },
   "freya-brandt": {
     first: "Freya", last: "Brandt",
-    cities: "Berlin / Hamburg",
+    cities: "London / Thessaloniki",
     height: "178", heightImp: "5'10\"",
     dress: "36", dressImp: "6 / S",
     shoes: "40", shoesImp: "9",
@@ -170,7 +170,7 @@ const PROFILES = {
   },
   "elias-roth": {
     first: "Elias", last: "Roth",
-    cities: "Berlin / New York",
+    cities: "London / Thessaloniki / Dubai",
     height: "192", heightImp: "6'4\"",
     dress: "50", dressImp: "40 / M",
     shoes: "44", shoesImp: "11",
@@ -182,7 +182,7 @@ const PROFILES = {
   },
   "noel-matteo": {
     first: "Noel", last: "Matteo",
-    cities: "Milan / Berlin",
+    cities: "London / Dubai",
     height: "190", heightImp: "6'3\"",
     dress: "50", dressImp: "40 / M",
     shoes: "43", shoesImp: "10.5",
@@ -194,7 +194,7 @@ const PROFILES = {
   },
   "viktor-orlov": {
     first: "Viktor", last: "Orlov",
-    cities: "Moscow / Berlin",
+    cities: "Thessaloniki / London",
     height: "188", heightImp: "6'2\"",
     dress: "48", dressImp: "38 / S",
     shoes: "43", shoesImp: "10.5",
@@ -206,7 +206,7 @@ const PROFILES = {
   },
   "andrei-orlov": {
     first: "Andrei", last: "Orlov",
-    cities: "Moscow / Berlin",
+    cities: "Dubai / London",
     height: "188", heightImp: "6'2\"",
     dress: "48", dressImp: "38 / S",
     shoes: "43", shoesImp: "10.5",
@@ -218,7 +218,7 @@ const PROFILES = {
   },
   "kai-engstrom": {
     first: "Kai", last: "Engstr\u00f6m",
-    cities: "Stockholm / Berlin",
+    cities: "London / Athens / Dubai",
     height: "185", heightImp: "6'1\"",
     dress: "48", dressImp: "38 / S",
     shoes: "42", shoesImp: "10",
@@ -230,7 +230,7 @@ const PROFILES = {
   },
   "marcus-bauer": {
     first: "Marcus", last: "Bauer",
-    cities: "Berlin / Munich",
+    cities: "Thessaloniki / Dubai",
     height: "191", heightImp: "6'3\"",
     dress: "50", dressImp: "40 / M",
     shoes: "44", shoesImp: "11",
@@ -242,7 +242,7 @@ const PROFILES = {
   },
   "leo-tanaka": {
     first: "Leo", last: "Tanaka",
-    cities: "Tokyo / Berlin",
+    cities: "London / Mykonos",
     height: "183", heightImp: "6'0\"",
     dress: "48", dressImp: "38 / S",
     shoes: "42", shoesImp: "10",
@@ -254,7 +254,7 @@ const PROFILES = {
   },
   "rafael-costa": {
     first: "Rafael", last: "Costa",
-    cities: "Lisbon / Berlin",
+    cities: "Dubai / Thessaloniki",
     height: "187", heightImp: "6'1.5\"",
     dress: "50", dressImp: "40 / M",
     shoes: "43", shoesImp: "10.5",
@@ -266,7 +266,7 @@ const PROFILES = {
   },
   "ines-morel": {
     first: "Ines", last: "Morel",
-    cities: "Paris / Berlin",
+    cities: "London / Abu Dhabi",
     height: "176", heightImp: "5'9\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "39", shoesImp: "8.5",
@@ -278,7 +278,7 @@ const PROFILES = {
   },
   "tobias-falk": {
     first: "Tobias", last: "Falk",
-    cities: "Berlin / Hamburg",
+    cities: "Thessaloniki / London / Dubai",
     height: "189", heightImp: "6'2\"",
     dress: "50", dressImp: "40 / M",
     shoes: "44", shoesImp: "11",
@@ -290,7 +290,7 @@ const PROFILES = {
   },
   "yara-osman": {
     first: "Yara", last: "Osman",
-    cities: "Berlin / London",
+    cities: "London / Dubai / Athens",
     height: "174", heightImp: "5'8.5\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "38", shoesImp: "7.5",
@@ -302,7 +302,7 @@ const PROFILES = {
   },
   "finn-larsen": {
     first: "Finn", last: "Larsen",
-    cities: "Copenhagen / Berlin",
+    cities: "Dubai / Mykonos",
     height: "186", heightImp: "6'1\"",
     dress: "48", dressImp: "38 / S",
     shoes: "43", shoesImp: "10.5",
@@ -314,7 +314,7 @@ const PROFILES = {
   },
   "amara-diallo": {
     first: "Amara", last: "Diallo",
-    cities: "Dakar / Berlin / Paris",
+    cities: "London / Thessaloniki",
     height: "178", heightImp: "5'10\"",
     dress: "36", dressImp: "6 / S",
     shoes: "40", shoesImp: "9",
@@ -326,7 +326,7 @@ const PROFILES = {
   },
   "luca-weiss": {
     first: "Luca", last: "Weiss",
-    cities: "Berlin / Zurich",
+    cities: "London / Thessaloniki / Dubai",
     height: "184", heightImp: "6'0.5\"",
     dress: "48", dressImp: "38 / S",
     shoes: "42", shoesImp: "10",
@@ -338,7 +338,7 @@ const PROFILES = {
   },
   "sofie-kjaer": {
     first: "Sofie", last: "Kjaer",
-    cities: "Copenhagen / Berlin",
+    cities: "London / Dubai",
     height: "175", heightImp: "5'9\"",
     dress: "34", dressImp: "4 / XS",
     shoes: "39", shoesImp: "8.5",
@@ -350,7 +350,7 @@ const PROFILES = {
   },
   "rami-haddad": {
     first: "Rami", last: "Haddad",
-    cities: "Beirut / Berlin",
+    cities: "Thessaloniki / London",
     height: "187", heightImp: "6'1.5\"",
     dress: "50", dressImp: "40 / M",
     shoes: "43", shoesImp: "10.5",
@@ -362,7 +362,7 @@ const PROFILES = {
   },
   "carla-voss": {
     first: "Carla", last: "Voss",
-    cities: "Berlin / Hamburg",
+    cities: "Dubai / London",
     height: "180", heightImp: "5'11\"",
     dress: "42", dressImp: "12 / L",
     shoes: "41", shoesImp: "10",
@@ -374,7 +374,7 @@ const PROFILES = {
   },
   "leonie-schulz": {
     first: "Leonie", last: "Schulz",
-    cities: "Berlin / Cologne",
+    cities: "London / Athens / Dubai",
     height: "175", heightImp: "5'9\"",
     dress: "42", dressImp: "12 / L",
     shoes: "40", shoesImp: "9",
@@ -386,7 +386,7 @@ const PROFILES = {
   },
   "aisha-rahman": {
     first: "Aisha", last: "Rahman",
-    cities: "London / Berlin",
+    cities: "Thessaloniki / Dubai",
     height: "172", heightImp: "5'8\"",
     dress: "40", dressImp: "10 / M",
     shoes: "39", shoesImp: "8.5",
@@ -398,7 +398,7 @@ const PROFILES = {
   },
   "bianca-ferro": {
     first: "Bianca", last: "Ferro",
-    cities: "Milan / Berlin",
+    cities: "London / Mykonos",
     height: "176", heightImp: "5'9\"",
     dress: "42", dressImp: "12 / L",
     shoes: "40", shoesImp: "9",
@@ -410,7 +410,7 @@ const PROFILES = {
   },
   "thandi-nkosi": {
     first: "Thandi", last: "Nkosi",
-    cities: "Cape Town / Berlin",
+    cities: "Dubai / Thessaloniki",
     height: "174", heightImp: "5'8.5\"",
     dress: "40", dressImp: "10 / M",
     shoes: "39", shoesImp: "8.5",
@@ -422,7 +422,7 @@ const PROFILES = {
   },
   "eva-nordstrom": {
     first: "Eva", last: "Nordstr\u00f6m",
-    cities: "Stockholm / Berlin",
+    cities: "London / Abu Dhabi",
     height: "178", heightImp: "5'10\"",
     dress: "42", dressImp: "12 / L",
     shoes: "41", shoesImp: "10",
