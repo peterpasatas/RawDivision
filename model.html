@@ -407,8 +407,11 @@
   var picked = otherIds.slice(0, 5);
   var discoverCards = picked.map(function(slug) {
     var d = PROFILES[slug];
+    var imgInner = d.cover
+      ? '<div class="discover-card-img" style="background:url(\'' + d.cover + '\') center/cover no-repeat;"></div>'
+      : '<div class="discover-card-img"><span class="dc-text">Photo</span></div>';
     return '<a class="discover-card reveal" href="model.html?id=' + slug + '">' +
-      '<div class="discover-card-img"><span class="dc-text">Photo</span></div>' +
+      imgInner +
       '<div class="discover-card-info"><div class="discover-card-name">' + d.first + ' ' + d.last + '</div>' +
       '<div class="discover-card-stats">' + d.height + 'cm / ' + d.heightImp + '</div></div></a>';
   }).join('\n    ');
@@ -423,7 +426,9 @@
     '    <p class="model-tagline anim-fade-up anim-d3">' + p.cities + '</p>' +
     '  </div>' +
     '  <div class="model-hero-right">' +
-    '    <div class="hero-image-placeholder"><span class="placeholder-text">Profile Image</span></div>' +
+    (p.cover
+      ? '    <div class="hero-image-placeholder" style="background:url(\'' + p.cover + '\') center/cover no-repeat;"></div>'
+      : '    <div class="hero-image-placeholder"><span class="placeholder-text">Profile Image</span></div>') +
     '  </div>' +
     '</section>' +
 

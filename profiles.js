@@ -1,4 +1,17 @@
 const PROFILES = {
+  "chloe-love": {
+    first: "Chloe", last: "Love",
+    cities: "London / Berlin / Paris",
+    height: "172", heightImp: "5'8\"",
+    dress: "34", dressImp: "4 / XS",
+    shoes: "38", shoesImp: "7.5",
+    bust: "82", bustImp: "32\"",
+    waist: "61", waistImp: "24\"",
+    hips: "89", hipsImp: "35\"",
+    board: "women",
+    cover: "images/chloe-love-cover.jpg",
+    gallery: ["Editorial","Studio","Beauty","Outdoor","Portrait","Fashion","Studio","Campaign","Editorial","Beauty","Studio","Outdoor"]
+  },
   "maren-voss": {
     first: "Maren", last: "Voss",
     cities: "Berlin / New York / Paris",
