@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maren Voss &mdash; Raw Division</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ── MODEL HERO ── */
+  .model-hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+  }
+  .model-hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 140px 72px 80px;
+    position: relative;
+  }
+  .model-hero-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, var(--scrim-light) 100%);
+    pointer-events: none;
+  }
+  .model-name-pre {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    position: relative;
+    z-index: var(--z-overlay);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .model-name-pre::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .model-name {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6vw, 96px);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: var(--z-overlay);
+  }
+  .model-name em { font-style: italic; font-weight: 300; color: var(--accent); }
+  .model-tagline {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--warm-gray);
+    margin-top: 20px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: var(--z-overlay);
+  }
+  .model-hero-right { position: relative; overflow: hidden; }
+  .hero-image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .hero-image-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--scrim-light) 0%, transparent 60%);
+  }
+  .placeholder-text {
+    font-family: var(--font-display);
+    font-size: 14px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    transform: rotate(-90deg);
+  }
+
+  /* ── BOOKING STRIP ── */
+  .booking-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 28px 48px;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--dark-gray);
+  }
+  .booking-strip .divider { width: 1px; height: 16px; background: var(--mid-gray); opacity: var(--ph-opacity); }
+  .booking-strip a, .booking-strip span {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    transition: color 0.3s;
+  }
+  .booking-strip a:hover { color: var(--white); }
+  .booking-strip .sedcard-btn {
+    padding: 8px 24px;
+    border: 1px solid var(--accent-dark);
+    color: var(--accent);
+    transition: all 0.3s;
+  }
+  .booking-strip .sedcard-btn:hover { background: var(--accent); color: var(--black); }
+
+  /* ── MODEL STATS ── */
+  .stats-section {
+    padding: 80px 72px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 80px;
+    align-items: start;
+    position: relative;
+  }
+  .stats-section::before {
+    content: 'STATS';
+    position: absolute;
+    top: 80px;
+    right: 72px;
+    font-family: var(--font-display);
+    font-size: 120px;
+    font-weight: 300;
+    color: var(--watermark);
+    letter-spacing: 20px;
+    pointer-events: none;
+  }
+  .stats-label-col h3 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .stats-label-col p {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .stat-card {
+    padding: 32px 28px;
+    border: 1px solid var(--border-subtle);
+    transition: background 0.4s;
+  }
+  .stat-card:hover { background: var(--overlay-faint); }
+  .stat-label {
+    font-family: var(--font-ui);
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 12px;
+  }
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+  }
+  .stat-value small { font-size: 13px; color: var(--warm-gray); margin-left: 8px; font-weight: 400; }
+
+  /* ── PORTFOLIO ── */
+  .portfolio-section { padding: 40px 0 100px; }
+  .portfolio-header {
+    padding: 0 72px 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .portfolio-header h2 {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .portfolio-header .count {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; padding: 0 3px; }
+  .gallery-item {
+    aspect-ratio: 3/4;
+    background: var(--dark-gray);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, var(--scrim-medium) 100%);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .gallery-item:hover::after { opacity: 1; }
+  .gallery-item .g-number {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-family: var(--font-display);
+    font-size: 14px;
+    color: var(--white);
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: var(--z-overlay);
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .gallery-item:hover .g-number { opacity: 1; }
+  .gallery-item .g-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-item .g-inner-text {
+    font-family: var(--font-ui);
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    opacity: var(--ph-opacity);
+  }
+  .gallery-item:nth-child(odd) { background: var(--surface-1); }
+  .gallery-item:nth-child(even) { background: var(--surface-2); }
+  .gallery-item:nth-child(3n) { background: var(--surface-3); }
+  .gallery-item:nth-child(4n+1) { background: var(--surface-4); }
+  .gallery-item.span-2 { grid-column: span 2; grid-row: span 2; }
+
+  /* ── DISCOVER ── */
+  .discover-section {
+    padding: 100px 72px;
+    border-top: 1px solid var(--border-subtle);
+    position: relative;
+  }
+  .discover-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 400px;
+    background: linear-gradient(180deg, var(--overlay-accent-faint) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .discover-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  .discover-header h2 {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .discover-header a {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    border-bottom: 1px solid var(--mid-gray);
+    padding-bottom: 4px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .discover-header a:hover { color: var(--white); border-color: var(--white); }
+  .discover-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .discover-card { position: relative; overflow: hidden; cursor: pointer; }
+  .discover-card-img {
+    aspect-ratio: 3/4;
+    background: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--duration-slow) var(--ease-out);
+    overflow: hidden;
+  }
+  .discover-card:hover .discover-card-img { transform: scale(1.02); }
+  .discover-card-info { padding: 16px 0; }
+  .discover-card-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+  .discover-card:hover .discover-card-name { color: var(--accent); }
+  .discover-card-stats {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-top: 4px;
+  }
+  .discover-card-img .dc-text {
+    font-family: var(--font-ui);
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--mid-gray);
+    opacity: var(--ph-opacity);
+  }
+  .discover-card:nth-child(1) .discover-card-img { background: var(--surface-1); }
+  .discover-card:nth-child(2) .discover-card-img { background: var(--surface-2); }
+  .discover-card:nth-child(3) .discover-card-img { background: var(--surface-3); }
+  .discover-card:nth-child(4) .discover-card-img { background: var(--surface-4); }
+  .discover-card:nth-child(5) .discover-card-img { background: var(--surface-5); }
+
+  @media (max-width: 1024px) {
+    .model-hero { grid-template-columns: 1fr; }
+    .model-hero-right { height: 70vh; }
+    .model-hero-left { padding: 120px 32px 60px; }
+    .stats-section { padding: 60px 32px; grid-template-columns: 1fr; gap: 40px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-header { padding: 0 32px 40px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item.span-2 { grid-column: span 2; grid-row: span 1; aspect-ratio: 2/1; }
+    .discover-section { padding: 60px 32px; }
+    .discover-grid { grid-template-columns: repeat(3, 1fr); }
+    .booking-strip { gap: 24px; flex-wrap: wrap; padding: 20px 32px; }
+  }
+  @media (max-width: 640px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; gap: 2px; padding: 0 2px; }
+    .gallery-item.span-2 { grid-column: span 2; }
+    .discover-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .model-name { font-size: 42px; }
+    .stats-section::before { display: none; }
+    .portfolio-header h2, .discover-header h2 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">Raw Division<span>Model Management</span></a>
+  <ul class="nav-links">
+    <li><a href="women.html">Women</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="new-faces.html">New Faces</a></li>
+    <li><a href="curved.html">Curved</a></li>
+    <li><a href="agency.html">Agency</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+  <a href="women.html">Women</a><a href="men.html">Men</a><a href="new-faces.html">New Faces</a>
+  <a href="curved.html">Curved</a><a href="agency.html">Agency</a><a href="news.html">News</a>
+  <a href="contact.html">Contact</a><a href="apply.html">Apply</a>
+</div>
+
+<section class="model-hero">
+  <div class="model-hero-left">
+    <div class="model-name-pre anim-fade-up anim-d1">Raw Division Exclusive</div>
+    <h1 class="model-name anim-fade-up anim-d2">Maren<br><em>Voss</em></h1>
+    <p class="model-tagline anim-fade-up anim-d3">Berlin &mdash; New York &mdash; Paris</p>
+  </div>
+  <div class="model-hero-right">
+    <div class="hero-image-placeholder"><span class="placeholder-text">Model Image</span></div>
+  </div>
+</section>
+
+<div class="booking-strip">
+  <a class="sedcard-btn" href="#">Download Sedcard</a>
+  <span class="divider"></span>
+  <span>Booking</span>
+  <a href="/cdn-cgi/l/email-protection#43212c2c282a2d2403312234272a352a302a2c2d6d202c2e"><span class="__cf_email__" data-cfemail="2e4c4141454740496e5c4f594a4758475d474140004d4143">[email&#160;protected]</span></a>
+  <span class="divider"></span>
+  <span>Editorials</span>
+  <a href="/cdn-cgi/l/email-protection#294c4d405d465b404845695b485e4d405f405a404647074a4644"><span class="__cf_email__" data-cfemail="80e5e4e9f4eff2e9e1ecc0f2e1f7e4e9f6e9f3e9efeeaee3efed">[email&#160;protected]</span></a>
+</div>
+
+<section class="stats-section">
+  <div class="stats-label-col reveal"><p>Measurements</p><h3>Profile</h3></div>
+  <div class="stats-grid">
+    <div class="stat-card reveal"><div class="stat-label">Height</div><div class="stat-value">178<small>cm / 5'10"</small></div></div>
+    <div class="stat-card reveal"><div class="stat-label">Dress</div><div class="stat-value">34<small>EU / 4 US</small></div></div>
+    <div class="stat-card reveal"><div class="stat-label">Shoes</div><div class="stat-value">41<small>EU / 10 US</small></div></div>
+    <div class="stat-card reveal"><div class="stat-label">Bust</div><div class="stat-value">83<small>cm / 33"</small></div></div>
+    <div class="stat-card reveal"><div class="stat-label">Waist</div><div class="stat-value">65<small>cm / 26"</small></div></div>
+    <div class="stat-card reveal"><div class="stat-label">Hips</div><div class="stat-value">92<small>cm / 36"</small></div></div>
+  </div>
+</section>
+
+<section class="portfolio-section">
+  <div class="portfolio-header reveal"><h2>Portfolio</h2><span class="count">12 Images</span></div>
+  <div class="gallery-grid">
+    <div class="gallery-item span-2 reveal"><div class="g-placeholder"><span class="g-inner-text">Editorial</span></div><span class="g-number">01</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Studio</span></div><span class="g-number">02</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Beauty</span></div><span class="g-number">03</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Studio</span></div><span class="g-number">04</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Editorial</span></div><span class="g-number">05</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Outdoor</span></div><span class="g-number">06</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Beauty</span></div><span class="g-number">07</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Fashion</span></div><span class="g-number">08</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Studio</span></div><span class="g-number">09</span></div>
+    <div class="gallery-item span-2 reveal"><div class="g-placeholder"><span class="g-inner-text">Campaign</span></div><span class="g-number">10</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Portrait</span></div><span class="g-number">11</span></div>
+    <div class="gallery-item reveal"><div class="g-placeholder"><span class="g-inner-text">Outdoor</span></div><span class="g-number">12</span></div>
+  </div>
+</section>
+
+<section class="discover-section">
+  <div class="discover-header reveal"><h2>Discover</h2><a href="women.html">View All Models</a></div>
+  <div class="discover-grid">
+    <a class="discover-card reveal" href="model.html">
+      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
+      <div class="discover-card-info"><div class="discover-card-name">Elias Roth</div><div class="discover-card-stats">192cm / 6'4"</div></div>
+    </a>
+    <a class="discover-card reveal" href="model.html">
+      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
+      <div class="discover-card-info"><div class="discover-card-name">Lina Berger</div><div class="discover-card-stats">180cm / 5'11"</div></div>
+    </a>
+    <a class="discover-card reveal" href="model.html">
+      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
+      <div class="discover-card-info"><div class="discover-card-name">Viktor &amp; Andrei</div><div class="discover-card-stats">Twins</div></div>
+    </a>
+    <a class="discover-card reveal" href="model.html">
+      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
+      <div class="discover-card-info"><div class="discover-card-name">Sanne de Vries</div><div class="discover-card-stats">177cm / 5'9.5"</div></div>
+    </a>
+    <a class="discover-card reveal" href="model.html">
+      <div class="discover-card-img"><span class="dc-text">Photo</span></div>
+      <div class="discover-card-info"><div class="discover-card-name">Noel Matteo</div><div class="discover-card-stats">190cm / 6'3"</div></div>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="footer-logo">Raw Division</div><p>International model management and talent representation. Berlin. New York. Paris. Milan.</p></div>
+    <div class="footer-col"><h4>Models</h4><ul><li><a href="women.html">Women</a></li><li><a href="men.html">Men</a></li><li><a href="curved.html">Curved</a></li><li><a href="new-faces.html">New Faces</a></li></ul></div>
+    <div class="footer-col"><h4>Agency</h4><ul><li><a href="agency.html">Abo

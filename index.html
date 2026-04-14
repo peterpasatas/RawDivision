@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raw Division &mdash; Model Management</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ── HOME HERO ── */
+  .home-hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .home-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--dark-gray);
+  }
+  .home-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, var(--scrim-light) 0%, var(--scrim-deep) 80%);
+  }
+  .home-hero-content {
+    position: relative;
+    z-index: var(--z-overlay);
+    padding: 0 72px 100px;
+  }
+  .home-hero-content .hero-tag {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .home-hero-content .hero-tag::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .home-hero-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(56px, 8vw, 130px);
+    font-weight: 300;
+    line-height: 0.92;
+    letter-spacing: -2px;
+    max-width: 900px;
+  }
+  .home-hero-content h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .home-hero-sub {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-top: 40px;
+  }
+  .home-hero-sub p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    color: var(--warm-gray);
+    max-width: 400px;
+    line-height: 1.6;
+  }
+  .home-hero-sub .hero-cta {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 14px 40px;
+    border: 1px solid var(--accent-dark);
+    color: var(--accent);
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+  .home-hero-sub .hero-cta:hover {
+    background: var(--accent);
+    color: var(--black);
+  }
+
+  /* ── CATEGORY STRIP ── */
+  .category-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 2px 0;
+  }
+  .category-card {
+    position: relative;
+    aspect-ratio: 3/4;
+    background: var(--dark-gray);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  .category-card-bg {
+    position: absolute;
+    inset: 0;
+    transition: transform var(--duration-slower) var(--ease-out);
+  }
+  .category-card:hover .category-card-bg { transform: scale(1.05); }
+  .category-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, var(--scrim-heavy) 100%);
+    z-index: var(--z-content);
+  }
+  .category-card-content {
+    position: relative;
+    z-index: var(--z-overlay);
+    padding: 36px;
+  }
+  .category-card-content h3 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .category-card-content span {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+  .category-card .ph-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: var(--font-ui);
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: var(--mid-gray);
+    opacity: var(--ph-opacity);
+    text-transform: uppercase;
+  }
+  .category-card:nth-child(1) .category-card-bg { background: var(--surface-1); }
+  .category-card:nth-child(2) .category-card-bg { background: var(--surface-2); }
+  .category-card:nth-child(3) .category-card-bg { background: var(--surface-3); }
+  .category-card:nth-child(4) .category-card-bg { background: var(--surface-4); }
+
+  /* ── ABOUT STRIP ── */
+  .about-strip {
+    padding: 120px 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    position: relative;
+  }
+  .about-strip::before {
+    content: 'RD';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: var(--font-display);
+    font-size: 300px;
+    font-weight: 300;
+    color: var(--watermark-faint);
+    pointer-events: none;
+    letter-spacing: 40px;
+  }
+  .about-left h2 {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 32px;
+  }
+  .about-left h2 em { font-style: italic; color: var(--accent); }
+  .about-right p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    color: var(--warm-gray);
+    line-height: 1.7;
+  }
+  .about-right p + p { margin-top: 20px; }
+  .about-right .about-cta {
+    display: inline-block;
+    margin-top: 32px;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent-dark);
+    padding-bottom: 4px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .about-right .about-cta:hover {
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  /* ── APPLICATION CTA ── */
+  .apply-cta-section {
+    padding: 120px 72px;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .apply-cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, var(--overlay-accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .apply-cta-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 300;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: var(--z-overlay);
+  }
+  .apply-cta-section h2 em { font-style: italic; color: var(--accent); }
+  .apply-cta-section p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    color: var(--warm-gray);
+    max-width: 500px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    position: relative;
+    z-index: var(--z-overlay);
+  }
+  .apply-cta-section .apply-btn {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 16px 52px;
+    border: 1px solid var(--accent-dark);
+    color: var(--accent);
+    transition: all 0.3s;
+    position: relative;
+    z-index: var(--z-overlay);
+  }
+  .apply-cta-section .apply-btn:hover {
+    background: var(--accent);
+    color: var(--black);
+  }
+
+  @media (max-width: 1024px) {
+    .home-hero-content { padding: 0 32px 60px; }
+    .category-strip { grid-template-columns: repeat(2, 1fr); }
+    .about-strip { padding: 80px 32px; grid-template-columns: 1fr; gap: 40px; }
+    .apply-cta-section { padding: 80px 32px; }
+    .home-hero-sub { flex-direction: column; align-items: flex-start; gap: 24px; }
+  }
+  @media (max-width: 640px) {
+    .category-strip { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">Raw Division<span>Model Management</span></a>
+  <ul class="nav-links">
+    <li><a href="women.html">Women</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="new-faces.html">New Faces</a></li>
+    <li><a href="curved.html">Curved</a></li>
+    <li><a href="agency.html">Agency</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+  <a href="women.html">Women</a>
+  <a href="men.html">Men</a>
+  <a href="new-faces.html">New Faces</a>
+  <a href="curved.html">Curved</a>
+  <a href="agency.html">Agency</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+  <a href="apply.html">Apply</a>
+</div>
+
+<!-- HOME HERO -->
+<section class="home-hero">
+  <div class="home-hero-bg"></div>
+  <div class="home-hero-content">
+    <div class="hero-tag anim-fade-up anim-d1">Berlin / New York / Paris / Milan</div>
+    <h1 class="anim-fade-up anim-d2">Raw<br><em>Division</em></h1>
+    <div class="home-hero-sub anim-fade-up anim-d3">
+      <p>International model management and talent representation. We discover, develop, and place extraordinary faces for fashion, media, and advertising worldwide.</p>
+      <a href="contact.html" class="hero-cta">Book a Model</a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY STRIP -->
+<section class="category-strip">
+  <a href="women.html" class="category-card reveal">
+    <div class="category-card-bg"></div>
+    <span class="ph-text">Photo</span>
+    <div class="category-card-content">
+      <h3>Women</h3>
+      <span>View Board</span>
+    </div>
+  </a>
+  <a href="men.html" class="category-card reveal">
+    <div class="category-card-bg"></div>
+    <span class="ph-text">Photo</span>
+    <div class="category-card-content">
+      <h3>Men</h3>
+      <span>View Board</span>
+    </div>
+  </a>
+  <a href="new-faces.html" class="category-card reveal">
+    <div class="category-card-bg"></div>
+    <span class="ph-text">Photo</span>
+    <div class="category-card-content">
+      <h3>New Faces</h3>
+      <span>View Board</span>
+    </div>
+  </a>
+  <a href="curved.html" class="category-card reveal">
+    <div class="category-card-bg"></div>
+    <span class="ph-text">Photo</span>
+    <div class="category-card-content">
+      <h3>Curved</h3>
+      <span>View Board</span>
+    </div>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip">
+  <div class="about-left reveal">
+    <h2>Model Agency<br>and <em>Management</em></h2>
+  </div>
+  <div class="about-right reveal">
+    <p>Raw Division is your model agency and model management. We search and scout models for our clients in fashion, media, and marketing. We work closely with our clients from individual brands to photographers, advertising agencies, and PR agencies.</p>
+    <p>Our team brings over 20 years of experience to all bookings. From casting and sedcard selection to final travel management and processing. You can focus entirely on your production -- with models on time, on set.</p>
+    <a href="agency.html" class="about-cta">Learn More About Us</a>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients-strip">
+  <h4>Trusted By</h4>
+  <div class="clients-logos">
+    <span class="client-logo-placeholder">Vogue</span>
+    <span class="client-logo-placeholder">Elle</span>
+    <span class="client-logo-placeholder">Zara</span>
+    <span class="client-logo-placeholder">H&M</span>
+    <span class="client-logo-placeholder">Dior</span>
+    <span class="client-logo-placeholder">Zalando</span>
+    <span class="client-logo-placeholder">Calvin Klein</span>
+    <span class="client-logo-placeholder">Cos</span>
+  </div>
+</section>
+
+<!-- BECOME A MODEL CTA -->
+<section class="apply-cta-section">
+  <h2 class="reveal">Become a <em>Model</em></h2>
+  <p class="reveal">A dream job, really. Nationally for e-commerce shoots, internationally on the catwalk. Start your journey with Raw Division.</p>
+  <a href="apply.html" class="apply-btn reveal">Apply Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Raw Division</div>
+      <p>International model management and talent representation. Berlin. New York. Paris. Milan.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Models</h4>
+      <ul>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="curved.html">Curved</a></li>
+        <li><a href="new-faces.html">New Faces</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Agency</h4>
+      <ul>
+        <li><a href="agency.html">About</a></li>
+        <li><a href="agency.html#team">Team</a></li>
+        <li><a href="contact.html">Casting</a></li>
+        <li><a href="agency.html#clients">Clients</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Booking</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="#">Imprint</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Raw Division Model Management. All rights reserved.</p>
+    <p>Imprint &nbsp;/&nbsp; Privacy</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

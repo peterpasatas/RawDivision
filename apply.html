@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply &mdash; Raw Division</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .apply-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin: 60px 0;
+  }
+  .apply-step {
+    padding: 48px 36px;
+    background: var(--overlay-faint);
+    border: 1px solid var(--border-muted);
+  }
+  .apply-step-num {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--accent-muted);
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  .apply-step h4 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+  .apply-step p {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--mid-gray);
+    line-height: 1.6;
+  }
+  .apply-form-section {
+    padding: 80px 72px 120px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .apply-form-section h2 {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 12px;
+  }
+  .apply-form-section > p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--mid-gray);
+    margin-bottom: 48px;
+    max-width: 560px;
+    line-height: 1.6;
+  }
+  .apply-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .upload-area-spaced { margin-bottom: var(--space-lg); }
+  .upload-hint {
+    font-size: 13px;
+    margin-top: var(--space-sm);
+  }
+  .submit-btn--full {
+    margin-top: var(--space-xl);
+    width: 100%;
+  }
+  @media (max-width: 1024px) {
+    .apply-steps { grid-template-columns: 1fr; }
+    .apply-form-section { padding: 60px 32px 80px; }
+    .apply-form-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 640px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">Raw Division<span>Model Management</span></a>
+  <ul class="nav-links">
+    <li><a href="women.html">Women</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="new-faces.html">New Faces</a></li>
+    <li><a href="curved.html">Curved</a></li>
+    <li><a href="agency.html">Agency</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+  <a href="women.html">Women</a><a href="men.html">Men</a><a href="new-faces.html">New Faces</a>
+  <a href="curved.html">Curved</a><a href="agency.html">Agency</a><a href="news.html">News</a>
+  <a href="contact.html">Contact</a><a href="apply.html">Apply</a>
+</div>
+
+<section class="page-hero full">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-pre anim-fade-up anim-d1">Start Your Career</div>
+  <h1 class="anim-fade-up anim-d2">Become a <em>Model</em></h1>
+  <p class="hero-sub anim-fade-up anim-d3">A dream job, really. Nationally for e-commerce shoots, internationally on the catwalk. Start your journey with Raw Division.</p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="content-section">
+  <h2 class="reveal">How It Works</h2>
+  <div class="apply-steps">
+    <div class="apply-step reveal">
+      <div class="apply-step-num">01</div>
+      <h4>Apply Online</h4>
+      <p>Submit your details and photos below. We review every application personally. No professional photos needed -- natural daylight snapshots are best.</p>
+    </div>
+    <div class="apply-step reveal">
+      <div class="apply-step-num">02</div>
+      <h4>Meet the Team</h4>
+      <p>If your look fits our board, we invite you to meet our bookers in person or via video call. We discuss your goals and potential.</p>
+    </div>
+    <div class="apply-step reveal">
+      <div class="apply-step-num">03</div>
+      <h4>Get Started</h4>
+      <p>Once signed, we build your portfolio with test shoots, create your sedcard, and begin placing you with clients and castings immediately.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="apply-form-section">
+  <h2 class="reveal">Your Application</h2>
+  <p class="reveal">Fill in your details below. We aim to respond to every application within 5 business days.</p>
+
+  <div class="apply-form-grid">
+    <div class="contact-form reveal">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="First name">
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Last name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="apply-email">Email</label>
+        <input type="email" id="apply-email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="+49 ...">
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="text" id="dob" placeholder="DD / MM / YYYY">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="Where are you based?">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="height">Height (cm)</label>
+          <input type="text" id="height" placeholder="e.g. 178">
+        </div>
+        <div class="form-group">
+          <label for="gender">Division</label>
+          <select id="gender">
+            <option value="">Select...</option>
+            <option value="women">Women</option>
+            <option value="men">Men</option>
+            <option value="curved">Curved</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="experience">Experience / Notes</label>
+        <textarea id="experience" placeholder="Tell us about any modeling experience, or anything else you'd like us to know..."></textarea>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="apply-upload-area upload-area-spaced">
+        <p>Upload 3-5 recent photos</p>
+        <p class="upload-hint">Face close-up, half body, full body. Natural light, no filters.</p>
+        <span class="upload-cta">Choose Files</span>
+      </div>
+      <div class="apply-upload-area">
+        <p>Digitals / Polaroids (optional)</p>
+        <p class="upload-hint">If you have existing polaroids or digitals from another agency.</p>
+        <span class="upload-cta">Choose Files</span>
+      </div>
+      <button class="submit-btn submit-btn--full" type="button">Submit Application</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="footer-logo">Raw Division</div><p>International model management and talent representation. Berlin. New York. Paris. Milan.</p></div>
+    <div class="footer-col"><h4>Models</h4><ul><li><a href="women.html">Women</a></li><li><a href="men.html">Men</a></li><li><a href="curved.html">Curved</a></li><li><a href="new-faces.html">New Faces</a></li></ul></div>
+    <div class="footer-col"><h4>Agency</h4><ul><li><a href="agency.html">About</a></li><li><a href="agency.html#team">Team</a></li><li><a href="contact.html">Casting</a></li><li><a href="agency.html#clients">Clients</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Booking</a></li><li><a href="apply.html">Apply</a></li><li><a href="news.html">News</a></li><li><a href="#">Imprint</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Raw Division Model Management. All rights reserved.</p><p>Imprint &nbsp;/&nbsp; Privacy</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

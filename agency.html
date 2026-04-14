@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agency &mdash; Raw Division</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .team-card-img {
+    aspect-ratio: 1/1;
+    background: var(--dark-gray);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .team-card-img .ph-label {
+    font-family: var(--font-ui);
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--mid-gray);
+    opacity: var(--ph-opacity);
+    text-transform: uppercase;
+  }
+  .team-card:nth-child(4n+1) .team-card-img { background: var(--surface-1); }
+  .team-card:nth-child(4n+2) .team-card-img { background: var(--surface-2); }
+  .team-card:nth-child(4n+3) .team-card-img { background: var(--surface-3); }
+  .team-card:nth-child(4n+4) .team-card-img { background: var(--surface-4); }
+  .team-card-name {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .team-card-role {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+  .cities-row {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  .city-item {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--mid-gray);
+    transition: color 0.3s;
+    cursor: default;
+  }
+  .city-item:hover { color: var(--accent); }
+  @media (max-width: 1024px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .team-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .cities-row { gap: 24px; }
+    .city-item { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">Raw Division<span>Model Management</span></a>
+  <ul class="nav-links">
+    <li><a href="women.html">Women</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="new-faces.html">New Faces</a></li>
+    <li><a href="curved.html">Curved</a></li>
+    <li><a href="agency.html" class="active">Agency</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+  <a href="women.html">Women</a><a href="men.html">Men</a><a href="new-faces.html">New Faces</a>
+  <a href="curved.html">Curved</a><a href="agency.html">Agency</a><a href="news.html">News</a>
+  <a href="contact.html">Contact</a><a href="apply.html">Apply</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-pre anim-fade-up anim-d1">About</div>
+  <h1 class="anim-fade-up anim-d2">The <em>Agency</em></h1>
+  <p class="hero-sub anim-fade-up anim-d3">Model agency and management. We discover, develop, and represent extraordinary talent for fashion, media, and advertising.</p>
+</section>
+
+<!-- ABOUT -->
+<section class="content-section">
+  <div class="two-col">
+    <div class="reveal">
+      <h2>Who We Are</h2>
+      <p>Raw Division is an international model management agency headquartered in Berlin with a global network spanning New York, Paris, Milan, London, and beyond. We work with the world's leading brands, photographers, and creative directors.</p>
+      <p>Founded on the principle that authentic beauty commands attention, we represent women, men, new faces, and curved talent across every dimension of the fashion and commercial industry.</p>
+    </div>
+    <div class="reveal">
+      <h3>Our Approach</h3>
+      <p>We work closely with each client from initial casting and sedcard selection through to travel management and final production. Our bookers ensure every model arrives prepared, professional, and on time -- so you can focus entirely on your creative vision.</p>
+      <p>With over 20 years of combined experience, our team understands the nuances of international bookings, editorial requirements, and commercial production at every scale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="content-section bordered">
+  <h2 class="reveal">What We Do</h2>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <div class="feature-number">01</div>
+      <h4>Model Booking</h4>
+      <p>Photo and video production for advertising, e-commerce, editorial, and campaigns. Personalized sedcard selections tailored to your brief.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-number">02</div>
+      <h4>Fashion Shows</h4>
+      <p>Runway talent for fashion weeks, showrooms, presentations, and brand events. From fittings to the final walk.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-number">03</div>
+      <h4>Talent Scouting</h4>
+      <p>We discover and develop the next generation of talent through international scouting, open castings, and digital submissions.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-number">04</div>
+      <h4>E-Commerce</h4>
+      <p>High-volume lookbook and online store productions with reliable, experienced models who deliver consistent results.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-number">05</div>
+      <h4>Campaign &amp; Advertising</h4>
+      <p>Full-service model placement for national and international advertising campaigns. Rights management and usage licensing included.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-number">06</div>
+      <h4>International Management</h4>
+      <p>Placement and coordination across international markets. Travel planning, visa support, and mother agency partnerships worldwide.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="content-section bordered" id="team">
+  <h2 class="reveal">The Team</h2>
+  <p class="reveal">Experienced bookers and managers who work 100% for every booking.</p>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <div class="team-card-img"><span class="ph-label">Photo</span></div>
+      <div class="team-card-name">Marta Vogt</div>
+      <div class="team-card-role">Founder &amp; Director</div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-card-img"><span class="ph-label">Photo</span></div>
+      <div class="team-card-name">Jan Richter</div>
+      <div class="team-card-role">Head Booker</div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-card-img"><span class="ph-label">Photo</span></div>
+      <div class="team-card-name">Selma Kadic</div>
+      <div class="team-card-role">Women's Division</div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-card-img"><span class="ph-label">Photo</span></div>
+      <div class="team-card-name">Felix Braun</div>
+      <div class="team-card-role">Men's Division</div>
+    </div>
+  </div>
+</section>
+
+<!-- CITIES -->
+<section class="content-section bordered">
+  <h2 class="reveal">Models In Town</h2>
+  <p class="reveal">Available talent in major markets worldwide.</p>
+  <div class="cities-row reveal">
+    <span class="city-item">Berlin</span>
+    <span class="city-item">Hamburg</span>
+    <span class="city-item">Munich</span>
+    <span class="city-item">Cologne</span>
+    <span class="city-item">London</span>
+    <span class="city-item">Paris</span>
+    <span class="city-item">Milan</span>
+    <span class="city-item">New York</span>
+    <span class="city-item">Los Angeles</span>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients-strip" id="clients">
+  <h4>Selected Clients &amp; References</h4>
+  <div class="clients-logos">
+    <span class="client-logo-placeholder">Vogue</span>
+    <span class="client-logo-placeholder">Elle</span>
+    <span class="client-logo-placeholder">Zara</span>
+    <span class="client-logo-placeholder">H&M</span>
+    <span class="client-logo-placeholder">Dior</span>
+    <span class="client-logo-placeholder">Zalando</span>
+    <span class="client-logo-placeholder">Calvin Klein</span>
+    <span class="client-logo-placeholder">Cos</span>
+    <span class="client-logo-placeholder">ASOS</span>
+    <span class="client-logo-placeholder">Mango</span>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="footer-logo">Raw Division</div><p>International model management and talent representation. Berlin. New York. Paris. Milan.</p></div>
+    <div class="footer-col"><h4>Models</h4><ul><li><a href="women.html">Women</a></li><li><a href="men.html">Men</a></li><li><a href="curved.html">Curved</a></li><li><a href="new-faces.html">New Faces</a></li></ul></div>
+    <div class="footer-col"><h4>Agency</h4><ul><li><a href="agency.html">About</a></li><li><a href="agency.html#team">Team</a></li><li><a href="contact.html">Casting</a></li><li><a href="agency.html#clients">Clients</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Booking</a></li><li><a href="apply.html">Apply</a></li><li><a href="news.html">News</a></li><li><a href="#">Imprint</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Raw Division Model Management. All rights reserved.</p><p>Imprint &nbsp;/&nbsp; Privacy</p></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
